@@ -1,0 +1,78 @@
+\documentclass[a4paper, 11pt]{article}
+
+\usepackage{lmodern} % Police standard sous LaTeX : Latin Modern
+\usepackage[french]{babel} % Pour la langue française
+\usepackage[utf8]{inputenc} % Pour l'UTF-8
+\usepackage[T1]{fontenc} % Pour les césures des caractères accentués
+\usepackage{amsmath,amsfonts, amssymb}
+\usepackage{geometry}
+\geometry{margin=2cm}
+\let\oldforall\forall
+\renewcommand{\forall}{\oldforall\,}
+\everymath{\displaystyle} 
+\usepackage{titlesec}
+
+\titleformat{\section}{\normalfont\Large\bfseries}{\thesection}{1em}{}
+\titleformat{\subsection}{\normalfont\large\bfseries}{\thesubsection}{1em}{}
+\titleformat{\subsubsection}{\normalfont\normalsize\bfseries}{\thesubsubsection}{1em}{}
+
+
+\begin{document}
+
+\title{Lien entre IPS et goûts d'élèves de}
+\author{
+   \bsc{Enzo Merioud}
+   \and
+   \bsc{Rayan Moustafid Dos Santos}
+   \and
+    \bsc{Monsieur S. Gibaud}\thanks{Directeur d'étude}
+} 
+\date{Jeudi 11 Janvier 2024} 
+
+\maketitle
+
+\tableofcontents
+
+\newpage
+
+\section{Introduction}
+\subsection{Motivations}
+
+\subsection{Prérequis Mathématiques, la régression linéaire}
+
+Pour chaque individu \(i\), la variable expliquée s'écrit comme une fonction linéaire des variables explicatives :
+\begin{align}
+y_i &= \beta_0 + \beta_1x_{i,1} + \cdots + \beta_Kx_{i,k} + \varepsilon_i
+\end{align}
+
+Où :
+
+- \(y_i\) est la variable dépendante (la variable que vous essayez de prédire) pour l'individu \(i\).
+- \(\beta_0\) est l'intercept, la valeur de \(y\) lorsque toutes les variables explicatives sont égales à zéro.
+- \(\beta_1, \beta_2, \ldots, \beta_K\) sont les coefficients de régression, représentant la relation entre la variable dépendante \(y\) et les variables explicatives \(x_1, x_2, \ldots, x_K\).
+- \(x_{i,1}, x_{i,2}, \ldots, x_{i,K}\) sont les valeurs des variables explicatives correspondantes pour l'individu \(i\).
+- \(\varepsilon_i\) est le résidu, l'erreur ou la différence entre la valeur observée \(y_i\) et la valeur prédite \(\hat{y}_i\) (la valeur obtenue à partir du modèle).
+
+Pour trouver les valeurs des \(\beta_0, \beta_1, \beta_2, \ldots, \beta_K\) et \(\varepsilon_i\), vous utilisez la méthode des moindres carrés ordinaires (MCO) qui vise à minimiser la somme des carrés des résidus. Cette méthode consiste à ajuster le modèle pour qu'il soit aussi proche que possible des données observées.
+
+Les résidus, \(\varepsilon_i\), sont les différences entre les valeurs observées de \(y_i\) et les valeurs prédites par le modèle (\(y_i - \hat{y}_i\)). Ils mesurent l'erreur de prédiction du modèle pour chaque individu de l'échantillon.
+
+\subsection{Organisation de l'étude et résultats obtenus}
+\subsubsection{Résultats Attendus}
+
+Le But de l'étude était de trouver un lien entre l'IPS des élève et leurs goûts en HGGSP. Effectivement, nous espérions que le coefficients de l'IPS soit le plus important. Malheureusement, d'après la régression linéaire, ce qui influence le plus les goûts des élèves c'est ce que préfère enseigner les professeurs.
+
+\subsubsection{Résultats Obtenus}
+
+Nous avons donc chercher d'autres résultats avec les données que nous possédons, et c'est ce que l'on a trouvé.
+
+
+\subsubsection{Approximations faites}
+Par manque d'informations, des approximations ont du être fait durant l'étude. Effectivement, certains professeur n'avait renseigné que le nom de leur académie. Dans ce cas là, nous mettons l'IPS moyen en voie GT de l'académie.
+
+\newpage
+
+\section{Corps de l'étude}
+
+
+\end{document}
